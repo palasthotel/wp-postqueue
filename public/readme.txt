@@ -3,7 +3,7 @@ Contributors: palasthotel, edwardbock, janaeggebrecht
 Donate link: https://palasthotel.de/
 Tags: loop, order posts, queue, gutenberg, curated
 Requires at least: 6.6
-Tested up to: 7.1.2
+Tested up to: 7.1
 Stable tag: 2.1.2
 Requires PHP: 7.4
 License: GPL-3.0-or-later
