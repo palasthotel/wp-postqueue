@@ -8,7 +8,7 @@ domReady( () => {
 		return;
 	}
 
-	// createRoot, not ReactDOM.render: WordPress ships React 18, where the legacy entry
-	// point warns and falls back to React 17 behaviour.
+	// createRoot, not ReactDOM.render: the legacy entry point warns under React 18 and is
+	// gone in React 19, which newer WordPress versions ship.
 	createRoot( container ).render( <QueueEditor /> );
 } );
