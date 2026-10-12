@@ -28,7 +28,7 @@
     "@wordpress/block-editor": "^18.0.0",
     "@wordpress/blocks": "^16.1.0",
     "@wordpress/components": "^41.0.0",
-    "@wordpress/compose": "^8.9.0",
+    "@wordpress/compose": "^8.10.0",
     "@wordpress/data": "^10.56.0",
     "@wordpress/dom-ready": "^4.56.0",
     "@wordpress/editor": "^15.1.0",
