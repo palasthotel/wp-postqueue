@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Postqueue
  * Description:       Create manually ordered postqueues
- * Version:           2.1.2
+ * Version:           3.0.0
  * Requires at least: 6.6
  * Requires PHP:      8.0
  * Author:            Palasthotel <webmaster@palasthotel.de>
