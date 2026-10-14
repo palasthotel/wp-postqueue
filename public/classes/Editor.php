@@ -92,7 +92,7 @@ class Editor extends Component {
 		if ( 'create' === $action ) {
 			check_admin_referer( self::NONCE_ACTION );
 
-			$name   = isset( $_POST['postqueue_name'] ) ? wp_unslash( $_POST['postqueue_name'] ) : '';
+			$name   = isset( $_POST['postqueue_name'] ) ? sanitize_text_field( wp_unslash( $_POST['postqueue_name'] ) ) : '';
 			$result = $this->plugin->store->create( $name );
 
 			wp_safe_redirect( $this->pageUrl( array(

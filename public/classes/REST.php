@@ -179,7 +179,8 @@ class REST extends Component\Component {
 				$placeholders = implode( ", ", array_fill( 0, max( 1, count( $postTypes ) ), "%s" ) );
 
 				global $wpdb;
-				$sql = $wpdb->prepare(
+				$results = $wpdb->get_results( $wpdb->prepare(
+					// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- $placeholders is a list of %s, one per public post type, and the replacements are passed as one array to match it
 					"SELECT ID, post_title FROM {$wpdb->posts}"
 					. " WHERE ("
 					. " post_title LIKE %s"
@@ -192,8 +193,7 @@ class REST extends Component\Component {
 						$postTypes ?: [ '' ],
 						[ intval( $result->search ) ]
 					)
-				);
-				$results = $wpdb->get_results($sql);
+				) );
 
 
 				$result->posts = array();

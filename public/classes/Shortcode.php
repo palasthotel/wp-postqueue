@@ -91,7 +91,7 @@ class Shortcode extends Component\Component {
 		<script type="text/javascript">
 			if(typeof QTags != "undefined")
 			{
-				QTags.addButton( 'postqueues', 'Postqueues', '[<?php echo Plugin::SHORTCODE; ?> slug=""]');
+				QTags.addButton( 'postqueues', 'Postqueues', '[<?php echo esc_js( Plugin::SHORTCODE ); ?> slug=""]');
 			}
 		</script>
 		<?php

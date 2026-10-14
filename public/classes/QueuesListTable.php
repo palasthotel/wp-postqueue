@@ -165,7 +165,7 @@ class QueuesListTable extends \WP_List_Table {
 		}, $queues );
 
 		$orderby = isset( $_REQUEST['orderby'] ) ? sanitize_key( $_REQUEST['orderby'] ) : 'name';
-		$order   = ( isset( $_REQUEST['order'] ) && 'desc' === strtolower( $_REQUEST['order'] ) ) ? 'desc' : 'asc';
+		$order   = ( isset( $_REQUEST['order'] ) && 'desc' === sanitize_key( wp_unslash( $_REQUEST['order'] ) ) ) ? 'desc' : 'asc';
 		if ( in_array( $orderby, [ 'name', 'slug', 'items' ], true ) ) {
 			usort( $rows, function ( $a, $b ) use ( $orderby ) {
 				return 'items' === $orderby
