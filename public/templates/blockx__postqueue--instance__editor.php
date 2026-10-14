@@ -14,7 +14,7 @@ if($query->have_posts()):
 	echo "<ul>";
 	while($query->have_posts()){
 		$query->the_post();
-		echo "<li>".get_the_title()."</li>";
+		echo "<li>" . wp_kses_post( get_the_title() ) . "</li>";
 	}
 	echo "</ul>";
 endif;

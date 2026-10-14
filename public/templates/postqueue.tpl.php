@@ -19,7 +19,7 @@ while ( $query->have_posts() ) {
 		'<li class="%s"><a href="%s">%s</a></li>',
 		esc_attr( trim( 'postqueue__list-item ' . $viewmode ) ),
 		esc_url( get_the_permalink() ),
-		get_the_title()
+		wp_kses_post( get_the_title() )
 	);
 }
 

@@ -126,7 +126,7 @@ class MetaBox extends Component\Component {
 			$this->plugin->store->add_post_to_queue( $post_id, $queue_id );
 		}
 		
-		echo "Postqueue ID: " . $queue_id;
+		echo "Postqueue ID: " . (int) $queue_id;
 		wp_die(); // this is required to terminate immediately and return a proper response
 	}
 	
@@ -142,7 +142,7 @@ class MetaBox extends Component\Component {
 			wp_send_json_error( null, 400 );
 		}
 		$this->plugin->store->remove_post_from_queue( $post_id, $queue_id );
-		echo "Postqueue ID: " . $queue_id;
+		echo "Postqueue ID: " . (int) $queue_id;
 		wp_die(); // this is required to terminate immediately and return a proper response
 	}
 }

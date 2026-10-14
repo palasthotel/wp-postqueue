@@ -17,21 +17,21 @@ $offset = (!empty($content->offset))? $content->offset: 0;
 $limit = (!empty($content->limit))? $content->limit: -1;
 
 ?>
-<div class="grid-box<?php echo ($this->style)? " ".$this->style." ": " "; echo implode($this->classes," ")?>">
+<div class="grid-box<?php echo esc_attr( ( $this->style ) ? " " . $this->style . " " : " " ); echo esc_attr( implode( " ", $this->classes ) ); ?>">
 	<?php
 	if ($this->title!=""){
 		
 		if ($this->titleurl !=""){
 			?>
-			<h2 class="grid-box-title"><a href="<?php echo $this->titleurl?>"><?php echo $this->title?></a></h2>
+			<h2 class="grid-box-title"><a href="<?php echo esc_url( $this->titleurl ); ?>"><?php echo wp_kses_post( $this->title ); ?></a></h2>
 		<?php }else{?>
-			<h2 class="grid-box-title"><?php echo $this->title?></h2>
+			<h2 class="grid-box-title"><?php echo wp_kses_post( $this->title ); ?></h2>
 		<?php }?>
 	<?php }?>
 	
 	<?php if($this->prolog != "") { ?>
 		<div class="grid-box-prolog">
-			<?php echo $this->prolog?>
+			<?php echo wp_kses_post( $this->prolog ); ?>
 		</div>
 	<?php } ?>
 	
@@ -41,13 +41,13 @@ $limit = (!empty($content->limit))? $content->limit: -1;
 	
 	<?php if($this->epilog != ""){ ?>
 		<div class="grid-box-epilog">
-			<?php echo $this->epilog?>
+			<?php echo wp_kses_post( $this->epilog ); ?>
 		</div>
 	<?php } ?>
 	
 	<?php
 	if ($this->readmore!=""){?>
-		<a href="<?php echo $this->readmoreurl?>" class="grid-box-readmore-link"><?php echo $this->readmore?></a>
+		<a href="<?php echo esc_url( $this->readmoreurl ); ?>" class="grid-box-readmore-link"><?php echo wp_kses_post( $this->readmore ); ?></a>
 	<?php }?>
 
 </div>
