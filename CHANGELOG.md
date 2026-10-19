@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/palasthotel/wp-postqueue/compare/v2.1.2...v3.0.0) (2026-10-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* requires PHP 8.0 or newer
+
+### Features
+
+* drop support for PHP 7.4 ([7c45ee3](https://github.com/palasthotel/wp-postqueue/commit/7c45ee342295c19938436265cc4f7d0470f74e1d))
+
 ## [2.1.2](https://github.com/palasthotel/ph-postqueue/compare/v2.1.1...v2.1.2) (2026-10-02)
 
 
