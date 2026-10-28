@@ -1,6 +1,6 @@
 {
   "name": "@palasthotel/postqueue",
-  "version": "2.1.2",
+  "version": "3.0.0",
   "description": "Be free to order posts as you wish. Plugin is available at [WordPress.org](https://wordpress.org/plugins/postqueue/)",
   "private": true,
   "scripts": {
